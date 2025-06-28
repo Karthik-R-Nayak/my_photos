@@ -1,0 +1,72 @@
+body {
+  margin: 0;
+  background-color: #ffffff;
+  font-family: 'Cormorant Garamond', serif;
+
+}
+
+.page-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-top: 30px;
+  margin-bottom: 40px;
+  color: #2ca4b9;
+  letter-spacing: 1px;
+ font-family: 'Cormorant Garamond', serif;
+
+}
+
+.gallery {
+  column-count: 3;
+  column-gap: 40px;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 10px;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  break-inside: avoid;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.gallery img:hover {
+  opacity: 0.85;
+}
+
+.footer {
+  text-align: center;
+  font-size: 1rem;
+  margin-top: 40px;
+  padding: 20px;
+  border-top: 1px solid #ccc;
+  font-family: 'Playfair Display', serif;
+}
+
+.footer a {
+  text-decoration: none;
+  color: #444;
+  margin: 0 5px;
+}
+
+.footer a:hover {
+  color: #000;
+}
+
+@media (max-width: 768px) {
+  .gallery {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery {
+    column-count: 1;
+  }
+}

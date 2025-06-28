@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Karthik Nayak | Photovault</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <h1 class="page-title">Karthik Nayak | Photography</h1>
+
+  <div class="gallery">
+    <a href="images/photo1.jpg" class="lightbox"><img src="images/photo1.jpg" alt="Photo 1"></a>
+    <a href="images/photo2.jpg" class="lightbox"><img src="images/photo2.jpg" alt="Photo 2"></a>
+    <a href="images/photo3.jpg" class="lightbox"><img src="images/photo3.jpg" alt="Photo 3"></a>
+    <a href="images/photo4.jpg" class="lightbox"><img src="images/photo4.jpg" alt="Photo 4"></a>
+    <a href="images/photo5.jpg" class="lightbox"><img src="images/photo5.jpg" alt="Photo 5"></a>
+    <a href="images/photo6.jpg" class="lightbox"><img src="images/photo6.jpg" alt="Photo 6"></a>
+    <a href="images/photo7.jpg" class="lightbox"><img src="images/photo7.jpg" alt="Photo 7"></a>
+    <a href="images/photo8.jpg" class="lightbox"><img src="images/photo8.jpg" alt="Photo 8"></a>
+    <a href="images/photo9.jpg" class="lightbox"><img src="images/photo9.jpg" alt="Photo 9"></a>
+    <a href="images/photo10.jpg" class="lightbox"><img src="images/photo10.jpg" alt="Photo 10"></a>
+    <a href="images/photo11.jpg" class="lightbox"><img src="images/photo11.jpg" alt="Photo 11"></a>
+    <a href="images/photo12.jpg" class="lightbox"><img src="images/photo12.jpg" alt="Photo 12"></a>     
+    <a href="images/photo13.jpg" class="lightbox"><img src="images/photo13.jpg" alt="Photo 13"></a>
+    <a href="images/photo14.jpg" class="lightbox"><img src="images/photo14.jpg" alt="Photo 14"></a>
+    <a href="images/photo15.jpg" class="lightbox"><img src="images/photo15.jpg" alt="Photo 15"></a>
+   
+  </div>
+
+  <footer class="footer">
+    <p>Connect with me:</p>
+    <a href="https://www.instagram.com/pixel_tales.jpg" target="_blank">Instagram1</a> 
+    <a href="https://www.instagram.com/mr_karthi06_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">Instagram2</a>
+    <a href="karthikrnayakhdk2006@gmail.com">Gmail</a>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.lightbox').forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        const img = document.createElement('img');
+        img.src = link.href;
+        img.style.cssText = 'max-width: 90vw; max-height: 90vh; border-radius: 8px;';
+        const overlay = document.createElement('div');
+        overlay.style.cssText = 'position:fixed; top:0; left:0; width:100%; height:100%; background:#000a; display:flex; align-items:center; justify-content:center; z-index:9999;';
+        overlay.appendChild(img);
+        overlay.addEventListener('click', () => document.body.removeChild(overlay));
+        document.body.appendChild(overlay);
+      });
+    });
+  </script>
+</body>
+</html>
